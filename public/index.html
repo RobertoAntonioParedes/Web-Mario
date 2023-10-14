@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de tailwindCSS</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="container bg-yellow-300 mx-auto">
+        <nav class="bg-gray-800 flex justify-between lg:justify-start items center">
+            <div class="logo p-2 w-1/6">
+                <img src="./img/logo.png" alt="logoMB" width="100">
+            </div>
+            <div class="links lg:block hidden w-1/6 md:w-4/6">
+                <ul class="menu flex items-center justify-center gap-5">
+                    <li><a href="" class="link">Home</a></li>
+                    <li><a href="" class="link">Play Together</a></li>
+                    <li><a href="" class="link">Explorer</a></li>
+                    <li><a href="" class="border-4 border-yellow-400 font-bold text-white p-2 rounded-full hover:bg-white
+                        hover:text-black transition duration-500">Bowser Fury</a></li>
+                    <li><a href="" class="rounded-full bg-red-500 text-white px-4 py-3 font-bold hover:text-black hover:bg-white transition duration-500">Buy now</a></li>
+                </ul>
+            </div>
+            <div class="block lg:hidden w-1/6 lg:w-4/6">
+                <a href="#" class="link" id="mobile-menu">Menu</a>
+                <ul class="mobile-links hidden w-full absolute z-50 left-0 text-center bg-gray-800">
+                    <li><a href="" class="link">Home</a></li>
+                    <li><a href="" class="link">Play Together</a></li>
+                    <li><a href="" class="link">Explorer</a></li>
+                    <li><a href="" class="my-4 inline-block border-4 border-yellow-400 font-bold text-white p-2 rounded-full hover:bg-white
+                        hover:text-black transition duration-500">Bowser Fury</a></li>
+                    <li><a href="" class="my-4 inline-block rounded-full bg-red-500 text-white px-4 py-3 font-bold hover:text-black hover:bg-white transition duration-500">Buy now</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        <section class="header">
+            <img src="./img/hero.jpg" alt="heroImg">
+        </section>
+        <section>
+            <div class="bg-wave-pattern bg-repeat-x h-6 relative -top-2"></div>
+            <div class="bg-wave-pattern-dots text-center p-4 flex md:flex-row flex-col gap-3 justify-center ">
+                <a href="#" class="inline-block py-3 px-16 bg-black text-white font-bold border-transparent border-8 text-2xl rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-200">Buy now</a>
+                <a href="#">Watch the trailer</a>
+            </div>
+        </section>
+    </div>
+    <script>
+        const menuBtn = document.querySelector('#mobile-menu');
+        menuBtn.addEventListener('click', ()=>{
+            const menu = document.querySelector('.mobile-links');
+            menu.classList.toggle('hidden');
+        })
+    </script>
+
+</body>
+</html>
